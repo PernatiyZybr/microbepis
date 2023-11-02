@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <link rel="stylesheet" href="styles.css">
+<title>Микробеписы</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+</style>
+</head>
+<body>
+
+<div class="header" id="scrollimage">
+  <h1>Микрочелики</h1>
+  <p>летают взад назад за ваши деньги</p>
+</div>
+
+<div class="row">
+  <div class="navbar">
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+  </div>
+  <div class="main">
+    <form>
+      <div  class="label_center"><label>Заголовок новости</label></div>
+      <div><input type="text" id="text_form" placeholder="Текст новости" height="500">
+      <input type="date" id="start" name="trip-start" value="2016-06-29" min="2016-06-29" max="2024-01-01" /></div>
+      <div><textarea name="comment" cols="60" rows="10"></textarea></p></div>
+
+      <div  class="label_center"><input type="submit" value="Отправить" + year></div>
+    </form>
+  </div>
+  <div class="main2">
+    <script>
+      document.write(0);
+      const readFile = fs.readFileSync('data.json', 'utf8');
+      document.write(0);
+      console.log(readFile);
+      const parsedData = JSON.parse(readFile);
+      document.write(1);
+      var obj = JSON.parse("storage/data.json"); // объект
+      document.write(2);
+      const header = document.querySelector("header");
+      document.write(3);
+      const myH1 = document.createElement("h1");
+      document.write(4);
+      myH1.textContent = obj.News;
+      document.write(5);
+      header.appendChild(myH1);
+      document.write(6);
+
+      const myPara = document.createElement("p");
+      myPara.textContent = `Hometown: ${obj.homeTown} // Formed: ${obj.formed}`;
+      header.appendChild(myPara);
+    </script>
+  </div>
+</div>
+
+
+<!--<script>  
+    var timerId = setInterval(function(){ 
+    var randcolor = '#' + (Math.random().toString(16) + '000000').substring(2,8).toUpperCase();
+    // document.getElementById("demo").style.backgroundColor = randcolor;  
+    if ((timerId % 1000) < 500) {
+      document.getElementById("scrollimage").style.backgroundImage = "url(img/banner1.jpg) left(100px)"; 
+      document.getElementByld("scrollimage").style.left = 0; 
+    } else {
+      // document.getElementById("scrollimage").style.backgroundImage = "url(img/banner2.jpg)";  
+      document.getElementByld("scrollimage").style.left = '111px';
+    }
+    document.getElementByld("scrollimage").style.top = '111px';
+    }, 1000);
+
+    </script>-->
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+
+
+</body>
+</html>
